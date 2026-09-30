@@ -1,0 +1,182 @@
+/* ==========================================================================
+   NEUMORPHISM DESIGN SYSTEM (neumorphism.css)
+   Monochromatic extruded surface, pure soft dual shadows, sunken deboss
+   ========================================================================== */
+
+[data-ui-style="neumorphism"] {
+  --style-name: "Neumorphism";
+  --neu-bg: #e0e5ec;
+  --neu-dark: #b8b9be;
+  --neu-light: #ffffff;
+  --border-subtle: transparent;
+}
+
+[data-ui-style="neumorphism"][data-theme="dark"],
+[data-ui-style="neumorphism"].dark,
+[data-ui-style="neumorphism"] [data-theme="dark"] {
+  --neu-bg: #1e212b;
+  --neu-dark: #13151c;
+  --neu-light: #292d3a;
+  --border-subtle: transparent;
+}
+
+/* Base Monochromatic Surface */
+[data-ui-style="neumorphism"] body {
+  background: var(--neu-bg) !important;
+}
+
+[data-ui-style="neumorphism"] .app-header {
+  background: var(--neu-bg) !important;
+}
+
+/* Extruded Neumorphic Song Rows */
+[data-ui-style="neumorphism"] .song-row {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 5px 5px 12px var(--neu-dark), -5px -5px 12px var(--neu-light) !important;
+  border-radius: 16px !important;
+  padding: 8px 14px !important;
+}
+
+[data-ui-style="neumorphism"] .song-row:hover {
+  box-shadow: 4px 4px 10px var(--neu-dark), -4px -4px 10px var(--neu-light) !important;
+  transform: translateY(-1px);
+}
+
+[data-ui-style="neumorphism"] .song-row:active {
+  box-shadow: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light) !important;
+  transform: scale(0.99);
+}
+
+[data-ui-style="neumorphism"] .song-row.active {
+  background: var(--neu-bg) !important;
+  color: var(--accent) !important;
+  border: none !important;
+  box-shadow: inset 6px 6px 12px var(--neu-dark), inset -6px -6px 12px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .song-row.active .song-artist,
+[data-ui-style="neumorphism"] .song-row.active .song-duration {
+  color: var(--accent) !important;
+}
+
+[data-ui-style="neumorphism"] .song-art {
+  box-shadow: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light) !important;
+}
+
+/* Sunken Inset Search */
+[data-ui-style="neumorphism"] .search-input {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light) !important;
+}
+
+/* Neumorphic Extruded Buttons */
+[data-ui-style="neumorphism"] .icon-btn,
+[data-ui-style="neumorphism"] .mp-btn,
+[data-ui-style="neumorphism"] .block-btn,
+[data-ui-style="neumorphism"] .clay-button {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 5px 5px 11px var(--neu-dark), -5px -5px 11px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .icon-btn:hover,
+[data-ui-style="neumorphism"] .mp-btn:hover,
+[data-ui-style="neumorphism"] .block-btn:hover,
+[data-ui-style="neumorphism"] .clay-button:hover {
+  box-shadow: 3px 3px 7px var(--neu-dark), -3px -3px 7px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .icon-btn:active,
+[data-ui-style="neumorphism"] .mp-btn:active,
+[data-ui-style="neumorphism"] .block-btn:active,
+[data-ui-style="neumorphism"] .clay-button:active,
+[data-ui-style="neumorphism"] .icon-btn.selected {
+  box-shadow: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light) !important;
+  transform: scale(0.97);
+}
+
+/* Neumorphic Accent Buttons */
+[data-ui-style="neumorphism"] .clay-accent-btn,
+[data-ui-style="neumorphism"] .mp-play-btn,
+[data-ui-style="neumorphism"] .add-block-btn {
+  background: var(--neu-bg) !important;
+  color: var(--accent) !important;
+  border: none !important;
+  box-shadow: 6px 6px 14px var(--neu-dark), -6px -6px 14px var(--neu-light) !important;
+  font-weight: 800;
+}
+
+[data-ui-style="neumorphism"] .clay-accent-btn:active,
+[data-ui-style="neumorphism"] .mp-play-btn:active,
+[data-ui-style="neumorphism"] .add-block-btn:active {
+  box-shadow: inset 5px 5px 10px var(--neu-dark), inset -5px -5px 10px var(--neu-light) !important;
+  transform: scale(0.97);
+}
+
+/* Checkbox */
+[data-ui-style="neumorphism"] .clay-checkbox {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 3px 3px 7px var(--neu-dark), -3px -3px 7px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .clay-checkbox.checked {
+  background: var(--neu-bg) !important;
+  color: var(--accent) !important;
+  box-shadow: inset 3px 3px 6px var(--neu-dark), inset -3px -3px 6px var(--neu-light) !important;
+}
+
+/* Containers */
+[data-ui-style="neumorphism"] .clay-box {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 8px 8px 18px var(--neu-dark), -8px -8px 18px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .clay-box-lg {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 14px 14px 28px var(--neu-dark), -14px -14px 28px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .clay-inset {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: inset 5px 5px 10px var(--neu-dark), inset -5px -5px 10px var(--neu-light) !important;
+}
+
+/* Mini Player */
+[data-ui-style="neumorphism"] .mini-player {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 10px 10px 24px var(--neu-dark), -10px -10px 24px var(--neu-light) !important;
+}
+
+/* Secondary Screen & Blocks */
+[data-ui-style="neumorphism"] .secondary-screen {
+  background: var(--neu-bg) !important;
+}
+
+[data-ui-style="neumorphism"] .secondary-header {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 9px 9px 20px var(--neu-dark), -9px -9px 20px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .secondary-close {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 4px 4px 10px var(--neu-dark), -4px -4px 10px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .generic-block {
+  background: var(--neu-bg) !important;
+  border: none !important;
+  box-shadow: 8px 8px 18px var(--neu-dark), -8px -8px 18px var(--neu-light) !important;
+}
+
+[data-ui-style="neumorphism"] .generic-block:hover {
+  box-shadow: 5px 5px 12px var(--neu-dark), -5px -5px 12px var(--neu-light) !important;
+}

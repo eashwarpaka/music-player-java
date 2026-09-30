@@ -1,0 +1,348 @@
+/* ==========================================================================
+   CUSTOM TWO DESIGN SYSTEM (customTwo.css)
+   Four Color Palette:
+   1. Primary: Black (#09090b / #000000)
+   2. Secondary: Gray (#27272a / #3f3f46 / #52525b)
+   3. Third Primary: White (#ffffff)
+   4. Last: Grayish (#9ca3af / #71717a)
+   ========================================================================== */
+
+[data-ui-style="custom_two"] {
+  --style-name: "Custom Two";
+  
+  /* 1. Primary Color: Black */
+  --c2-black: #09090b;
+  --c2-black-deep: #000000;
+  --c2-black-surface: #121215;
+  --c2-black-card: #18181b;
+
+  /* 2. Secondary Color: Gray */
+  --c2-gray: #3f3f46;
+  --c2-gray-border: #27272a;
+  --c2-gray-border-hover: #52525b;
+  --c2-gray-btn: #222226;
+
+  /* 3. Third Primary Color: White */
+  --c2-white: #ffffff;
+  --c2-white-pure: #ffffff;
+  --c2-white-glow: rgba(255, 255, 255, 0.15);
+
+  /* 4. Last Color: Grayish */
+  --c2-grayish: #9ca3af;
+  --c2-grayish-muted: #71717a;
+  --c2-grayish-light: #d4d4d8;
+
+  /* Futuristic Cyber Accent */
+  --c2-cyan: #00f0ff;
+  --c2-cyan-glow: rgba(0, 240, 255, 0.4);
+  --c2-cyan-border: rgba(0, 240, 255, 0.35);
+
+  /* Framework Fallbacks */
+  --clay-bg: var(--c2-black);
+  --card-bg: var(--c2-black-card);
+  --accent: var(--c2-cyan);
+  --accent-dark: #00d2ff;
+  --text: var(--c2-white);
+  --text-dim: var(--c2-grayish);
+  --border-subtle: var(--c2-gray-border);
+  --overlay-bg: rgba(0, 0, 0, 0.85);
+}
+
+/* --------------------------------------------------------------------------
+   1. Canvas, Body & App Container (Primary Black)
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_two"] body {
+  background: var(--c2-black) !important;
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .app-header {
+  background: var(--c2-black) !important;
+  border-bottom: 1px solid var(--c2-gray-border) !important;
+}
+
+[data-ui-style="custom_two"] .brand-icon {
+  background: var(--c2-white) !important;
+  color: var(--c2-black-deep) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: 0 0 16px var(--c2-cyan-glow) !important;
+}
+
+[data-ui-style="custom_two"] .brand-name,
+[data-ui-style="custom_two"] .header-page-title {
+  color: var(--c2-white) !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Song Rows & Cards (Surface Black + Gray Borders + White Titles + Grayish Text)
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_two"] .song-row {
+  background: var(--c2-black-card) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  border-radius: 15px !important;
+  padding: 8px 14px !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.6) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-ui-style="custom_two"] .song-row:hover {
+  background: #1f1f23 !important;
+  border-color: var(--c2-gray-border-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8) !important;
+}
+
+[data-ui-style="custom_two"] .song-row:active {
+  transform: scale(0.99);
+}
+
+[data-ui-style="custom_two"] .song-row.active {
+  background: var(--c2-black-surface) !important;
+  border: 1.5px solid var(--c2-cyan) !important;
+  box-shadow: 0 0 24px var(--c2-cyan-glow), 0 4px 20px rgba(0, 0, 0, 0.9) !important;
+}
+
+[data-ui-style="custom_two"] .song-title {
+  color: var(--c2-white) !important;
+  font-weight: 700 !important;
+}
+
+[data-ui-style="custom_two"] .song-artist {
+  color: var(--c2-grayish) !important;
+}
+
+[data-ui-style="custom_two"] .song-duration {
+  color: var(--c2-grayish-muted) !important;
+}
+
+[data-ui-style="custom_two"] .song-art {
+  background: var(--c2-gray-btn) !important;
+  border: 1px solid var(--c2-gray) !important;
+  color: var(--c2-white) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Interactive Buttons & Controls (Secondary Gray & Grayish)
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_two"] .icon-btn,
+[data-ui-style="custom_two"] .mp-btn,
+[data-ui-style="custom_two"] .block-btn,
+[data-ui-style="custom_two"] .clay-button {
+  background: var(--c2-gray-btn) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  color: var(--c2-grayish-light) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.15s ease;
+}
+
+[data-ui-style="custom_two"] .icon-btn:hover,
+[data-ui-style="custom_two"] .mp-btn:hover,
+[data-ui-style="custom_two"] .block-btn:hover,
+[data-ui-style="custom_two"] .clay-button:hover {
+  background: var(--c2-gray) !important;
+  color: var(--c2-white) !important;
+  border-color: var(--c2-cyan-border) !important;
+  box-shadow: 0 0 12px var(--c2-cyan-glow) !important;
+  transform: translateY(-1px);
+}
+
+[data-ui-style="custom_two"] .icon-btn:active,
+[data-ui-style="custom_two"] .mp-btn:active,
+[data-ui-style="custom_two"] .block-btn:active,
+[data-ui-style="custom_two"] .clay-button:active {
+  transform: scale(0.96);
+  background: #18181b !important;
+}
+
+/* Search Bar (Black inset + Gray border + Grayish placeholder + Cyan focus glow) */
+[data-ui-style="custom_two"] .search-input {
+  background: var(--c2-black-surface) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  color: var(--c2-white) !important;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.7) !important;
+  transition: all 0.2s ease;
+}
+
+[data-ui-style="custom_two"] .search-input::placeholder {
+  color: var(--c2-grayish-muted) !important;
+}
+
+[data-ui-style="custom_two"] .search-input:focus {
+  border-color: var(--c2-cyan) !important;
+  box-shadow: 0 0 16px var(--c2-cyan-glow), inset 0 2px 6px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Accent High-Impact Elements (Third White & Cyber Cyan)
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_two"] .clay-accent-btn,
+[data-ui-style="custom_two"] .mp-play-btn,
+[data-ui-style="custom_two"] .add-block-btn {
+  background: var(--c2-white) !important;
+  color: var(--c2-black-deep) !important;
+  border: 1px solid var(--c2-white) !important;
+  box-shadow: 0 0 18px var(--c2-cyan-glow), 0 4px 18px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 800 !important;
+  transition: all 0.2s ease;
+}
+
+[data-ui-style="custom_two"] .clay-accent-btn:hover,
+[data-ui-style="custom_two"] .mp-play-btn:hover,
+[data-ui-style="custom_two"] .add-block-btn:hover {
+  background: var(--c2-cyan) !important;
+  color: var(--c2-black-deep) !important;
+  border-color: var(--c2-cyan) !important;
+  transform: translateY(-1.5px);
+  box-shadow: 0 0 26px var(--c2-cyan-glow), 0 6px 24px rgba(0, 0, 0, 0.9) !important;
+}
+
+[data-ui-style="custom_two"] .clay-accent-btn:active,
+[data-ui-style="custom_two"] .mp-play-btn:active,
+[data-ui-style="custom_two"] .add-block-btn:active {
+  transform: scale(0.95);
+  background: #00bcd4 !important;
+}
+
+/* Checkbox with Futuristic Cyan active indicator */
+[data-ui-style="custom_two"] .clay-checkbox {
+  background: var(--c2-black-surface) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .clay-checkbox.checked {
+  background: var(--c2-cyan) !important;
+  color: var(--c2-black-deep) !important;
+  border-color: var(--c2-cyan) !important;
+  box-shadow: 0 0 12px var(--c2-cyan-glow) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Floating Mini Player Pill
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_two"] .mini-player {
+  background: rgba(18, 18, 22, 0.92) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9), 0 0 1px rgba(255, 255, 255, 0.15) !important;
+  border-radius: 24px !important;
+}
+
+[data-ui-style="custom_two"] .mini-player:hover {
+  border-color: var(--c2-gray-border-hover) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.95) !important;
+}
+
+[data-ui-style="custom_two"] .mp-art {
+  background: var(--c2-gray-btn) !important;
+  border: 1px solid var(--c2-gray) !important;
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .mp-title {
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .mp-artist {
+  color: var(--c2-grayish) !important;
+}
+
+/* Custom Two Progress Bar & Sine Wave */
+[data-ui-style="custom_two"] .mp-progress-track,
+[data-ui-style="custom_two"] .sine-wave-track {
+  background: var(--c2-black-surface) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.85) !important;
+}
+
+[data-ui-style="custom_two"] .sine-wave-played-line {
+  stroke: url(#mini-sine-gradient) !important;
+  filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.6)) !important;
+}
+
+[data-ui-style="custom_two"] .sine-wave-unplayed-line {
+  stroke: rgba(156, 163, 175, 0.35) !important;
+}
+
+[data-ui-style="custom_two"] .sine-wave-thumb {
+  background: #ffffff !important;
+  border: 2px solid var(--c2-cyan) !important;
+  box-shadow: 0 0 12px var(--c2-cyan-glow) !important;
+}
+
+[data-ui-style="custom_two"] .mp-progress-fill {
+  background: linear-gradient(90deg, var(--c2-cyan) 0%, #00b4d8 100%) !important;
+  box-shadow: 0 0 16px var(--c2-cyan-glow) !important;
+}
+
+[data-ui-style="custom_two"] .mp-progress-thumb {
+  background: #ffffff !important;
+  border: 2.5px solid var(--c2-cyan) !important;
+  box-shadow: 0 0 14px var(--c2-cyan-glow), 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Containers, Modals & Generic Blocks
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_two"] .clay-box {
+  background: var(--c2-black-card) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7) !important;
+  border-radius: 20px !important;
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .clay-box-lg {
+  background: var(--c2-black-surface) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9) !important;
+  border-radius: 24px !important;
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .clay-inset {
+  background: var(--c2-black) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Secondary Screen */
+[data-ui-style="custom_two"] .secondary-screen {
+  background: var(--c2-black) !important;
+}
+
+[data-ui-style="custom_two"] .secondary-header {
+  background: var(--c2-black-card) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7) !important;
+  border-radius: 20px !important;
+}
+
+[data-ui-style="custom_two"] .secondary-close {
+  background: var(--c2-gray-btn) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .generic-block {
+  background: var(--c2-black-card) !important;
+  border: 1px solid var(--c2-gray-border) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7) !important;
+  border-radius: 20px !important;
+}
+
+[data-ui-style="custom_two"] .generic-block:hover {
+  border-color: var(--c2-gray-border-hover) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.85) !important;
+}
+
+[data-ui-style="custom_two"] .block-name {
+  color: var(--c2-white) !important;
+}
+
+[data-ui-style="custom_two"] .block-badge {
+  background: var(--c2-gray) !important;
+  color: var(--c2-white) !important;
+  border: 1px solid var(--c2-gray-border-hover) !important;
+}

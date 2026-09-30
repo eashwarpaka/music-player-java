@@ -1,0 +1,50 @@
+/* ==========================================================================
+   STYLE ARCHITECTURE CENTRAL HUB
+   Imports all modular design systems:
+   - Custom Three (Black Gray Primary & Obsidian Strong Black)
+   - Custom Two (Black, Gray, White Monochrome & Cyber Cyan)
+   - Claymorphism (Soft 3D & Playful Tactile Depth)
+   - Glassmorphism (Frosted Glass & Luminous specularity)
+   - Neumorphism (Soft Extruded Surface & Debossed Pressed States)
+   - Modern Minimal (Sharp Precision Lines & Flat Contrast)
+   ========================================================================== */
+
+@import "./themes/claymorphism.css";
+@import "./themes/glassmorphism.css";
+@import "./themes/neumorphism.css";
+@import "./themes/minimal.css";
+@import "./themes/customTwo.css";
+@import "./themes/customThree.css";
+
+/* Global smooth transitions when switching design styles */
+body,
+.app,
+.app-header,
+.song-row,
+.search-input,
+.icon-btn,
+.mp-btn,
+.mp-play-btn,
+.block-btn,
+.secondary-header,
+.secondary-close,
+.clay-box,
+.clay-box-lg,
+.clay-button,
+.clay-accent-btn,
+.clay-inset,
+.generic-block,
+.mini-player,
+.sine-wave-track,
+.sine-wave-container,
+.song-card {
+  transition: background 0.35s ease, 
+              background-color 0.35s ease,
+              box-shadow 0.35s ease, 
+              border 0.35s ease, 
+              border-color 0.35s ease,
+              backdrop-filter 0.35s ease,
+              -webkit-backdrop-filter 0.35s ease,
+              border-radius 0.35s ease,
+              transform 0.2s ease;
+}

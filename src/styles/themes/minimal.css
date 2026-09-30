@@ -1,0 +1,197 @@
+/* ==========================================================================
+   MODERN MINIMAL DESIGN SYSTEM (minimal.css)
+   Clean flat cards, precision 1px borders, subtle elevation, sleek modern lines
+   ========================================================================== */
+
+[data-ui-style="minimal"] {
+  --style-name: "Modern Minimal";
+  --min-bg: #f8fafc;
+  --min-card: #ffffff;
+  --min-card-hover: #f1f5f9;
+  --min-border: #e2e8f0;
+  --min-border-strong: #cbd5e1;
+  --min-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --min-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --border-subtle: #e2e8f0;
+}
+
+[data-ui-style="minimal"][data-theme="dark"],
+[data-ui-style="minimal"].dark,
+[data-ui-style="minimal"] [data-theme="dark"] {
+  --min-bg: #090d16;
+  --min-card: #131926;
+  --min-card-hover: #1b2336;
+  --min-border: #232d42;
+  --min-border-strong: #334155;
+  --min-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --min-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --border-subtle: #232d42;
+}
+
+/* Base Body */
+[data-ui-style="minimal"] body {
+  background: var(--min-bg) !important;
+}
+
+[data-ui-style="minimal"] .app-header {
+  background: var(--min-bg) !important;
+}
+
+/* Minimal Song Rows */
+[data-ui-style="minimal"] .song-row {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: var(--min-shadow) !important;
+  border-radius: 14px !important;
+  padding: 8px 14px !important;
+}
+
+[data-ui-style="minimal"] .song-row:hover {
+  background: var(--min-card-hover) !important;
+  border-color: var(--min-border-strong) !important;
+  box-shadow: var(--min-shadow-hover) !important;
+  transform: translateY(-1.5px);
+}
+
+[data-ui-style="minimal"] .song-row:active {
+  transform: scale(0.99);
+}
+
+[data-ui-style="minimal"] .song-row.active {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.35) !important;
+}
+
+[data-ui-style="minimal"] .song-art {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px !important;
+}
+
+/* Search Input */
+[data-ui-style="minimal"] .search-input {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-ui-style="minimal"] .search-input:focus {
+  border-color: var(--accent) !important;
+}
+
+/* Minimal Buttons */
+[data-ui-style="minimal"] .icon-btn,
+[data-ui-style="minimal"] .mp-btn,
+[data-ui-style="minimal"] .block-btn,
+[data-ui-style="minimal"] .clay-button {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-ui-style="minimal"] .icon-btn:hover,
+[data-ui-style="minimal"] .mp-btn:hover,
+[data-ui-style="minimal"] .block-btn:hover,
+[data-ui-style="minimal"] .clay-button:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-1px);
+}
+
+[data-ui-style="minimal"] .icon-btn:active,
+[data-ui-style="minimal"] .mp-btn:active,
+[data-ui-style="minimal"] .block-btn:active,
+[data-ui-style="minimal"] .clay-button:active {
+  transform: scale(0.96);
+  box-shadow: none !important;
+}
+
+/* Minimal Accent Buttons */
+[data-ui-style="minimal"] .clay-accent-btn,
+[data-ui-style="minimal"] .mp-play-btn,
+[data-ui-style="minimal"] .add-block-btn {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 4px 14px rgba(0, 240, 255, 0.35) !important;
+}
+
+[data-ui-style="minimal"] .clay-accent-btn:hover,
+[data-ui-style="minimal"] .mp-play-btn:hover,
+[data-ui-style="minimal"] .add-block-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 240, 255, 0.5) !important;
+}
+
+/* Minimal Checkboxes */
+[data-ui-style="minimal"] .clay-checkbox {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: none !important;
+}
+
+[data-ui-style="minimal"] .clay-checkbox.checked {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Minimal Containers */
+[data-ui-style="minimal"] .clay-box {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: var(--min-shadow) !important;
+  border-radius: 16px !important;
+}
+
+[data-ui-style="minimal"] .clay-box-lg {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 20px !important;
+}
+
+[data-ui-style="minimal"] .clay-inset {
+  background: rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: none !important;
+}
+
+/* Minimal Mini Player */
+[data-ui-style="minimal"] .mini-player {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 20px !important;
+}
+
+/* Minimal Secondary Screen & Blocks */
+[data-ui-style="minimal"] .secondary-screen {
+  background: var(--min-bg) !important;
+}
+
+[data-ui-style="minimal"] .secondary-header {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: var(--min-shadow) !important;
+  border-radius: 18px !important;
+}
+
+[data-ui-style="minimal"] .secondary-close {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-ui-style="minimal"] .generic-block {
+  background: var(--min-card) !important;
+  border: 1px solid var(--min-border) !important;
+  box-shadow: var(--min-shadow) !important;
+  border-radius: 16px !important;
+}
+
+[data-ui-style="minimal"] .generic-block:hover {
+  border-color: var(--accent) !important;
+  box-shadow: var(--min-shadow-hover) !important;
+}

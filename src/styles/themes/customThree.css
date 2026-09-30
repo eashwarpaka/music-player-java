@@ -1,0 +1,338 @@
+/* ==========================================================================
+   CUSTOM THREE DESIGN SYSTEM (customThree.css)
+   
+   Color Hierarchy:
+   1. Primary: Black Gray (#18181b / #1e1e24 / #24242c)
+   2. Secondary: Strong Black (#000000 / #050507 / #0c0c0f)
+   3. Blending Accents: Titanium Platinum (#f8fafc), Charcoal Slate (#94a3b8),
+      and Luminous Amber Gold (#f59e0b) + Electric Wave (#38bdf8) blends.
+   ========================================================================== */
+
+[data-ui-style="custom_three"] {
+  --style-name: "Custom Three";
+
+  /* 1. Primary Color: Black Gray */
+  --c3-blackgray: #18181b;
+  --c3-blackgray-surface: #1e1e24;
+  --c3-blackgray-card: #24242c;
+  --c3-blackgray-btn: #272732;
+  --c3-blackgray-hover: #32323f;
+
+  /* 2. Secondary Color: Strong Black */
+  --c3-strong-black: #000000;
+  --c3-strong-black-deep: #050507;
+  --c3-strong-black-surface: #0a0a0e;
+  --c3-strong-black-inset: #070709;
+
+  /* 3. Blending Colors & Gradients */
+  --c3-border: #2d2d3a;
+  --c3-border-hover: #48485c;
+  --c3-border-focus: #f59e0b;
+  --c3-text-white: #f8fafc;
+  --c3-text-slate: #94a3b8;
+  --c3-text-dim: #64748b;
+
+  /* Radiant Blended Accents */
+  --c3-accent: #f59e0b;
+  --c3-accent-glow: rgba(245, 158, 11, 0.4);
+  --c3-accent-wave: #38bdf8;
+  --c3-accent-wave-glow: rgba(56, 189, 248, 0.45);
+
+  /* Framework Fallbacks */
+  --clay-bg: var(--c3-blackgray);
+  --card-bg: var(--c3-blackgray-card);
+  --accent: var(--c3-accent);
+  --accent-dark: #d97706;
+  --text: var(--c3-text-white);
+  --text-dim: var(--c3-text-slate);
+  --border-subtle: var(--c3-border);
+  --overlay-bg: rgba(5, 5, 7, 0.88);
+}
+
+/* --------------------------------------------------------------------------
+   1. Canvas, Body & App Container (Black Gray Primary + Strong Black Accents)
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_three"] body {
+  background: radial-gradient(circle at top right, #1f1f28 0%, var(--c3-strong-black) 85%) !important;
+  color: var(--c3-text-white) !important;
+  background-attachment: fixed;
+}
+
+[data-ui-style="custom_three"] .app-header {
+  background: rgba(24, 24, 27, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--c3-border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+}
+
+[data-ui-style="custom_three"] .brand-icon {
+  background: var(--c3-strong-black) !important;
+  color: var(--c3-accent) !important;
+  border: 1px solid var(--c3-border-hover) !important;
+  box-shadow: 0 0 16px var(--c3-accent-glow) !important;
+}
+
+[data-ui-style="custom_three"] .brand-name,
+[data-ui-style="custom_three"] .header-page-title {
+  color: var(--c3-text-white) !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Song Rows & Cards (Black Gray Card + Strong Black Inset + Gold/Cyan Glow)
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_three"] .song-row {
+  background: var(--c3-blackgray-card) !important;
+  border: 1px solid var(--c3-border) !important;
+  border-radius: 15px !important;
+  padding: 8px 14px !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-ui-style="custom_three"] .song-row:hover {
+  background: var(--c3-blackgray-hover) !important;
+  border-color: var(--c3-border-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.85), 0 0 14px rgba(245, 158, 11, 0.15) !important;
+}
+
+[data-ui-style="custom_three"] .song-row:active {
+  transform: scale(0.99);
+}
+
+[data-ui-style="custom_three"] .song-row.active {
+  background: var(--c3-strong-black-surface) !important;
+  border: 1.5px solid var(--c3-accent) !important;
+  box-shadow: 0 0 24px var(--c3-accent-glow), 0 6px 22px rgba(0, 0, 0, 0.95) !important;
+}
+
+[data-ui-style="custom_three"] .song-title {
+  color: var(--c3-text-white) !important;
+  font-weight: 700 !important;
+}
+
+[data-ui-style="custom_three"] .song-artist {
+  color: var(--c3-text-slate) !important;
+}
+
+[data-ui-style="custom_three"] .song-duration {
+  color: var(--c3-text-dim) !important;
+}
+
+[data-ui-style="custom_three"] .song-art {
+  background: var(--c3-strong-black) !important;
+  border: 1px solid var(--c3-border) !important;
+  color: var(--c3-text-white) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Interactive Buttons & Controls
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_three"] .icon-btn,
+[data-ui-style="custom_three"] .mp-btn,
+[data-ui-style="custom_three"] .block-btn,
+[data-ui-style="custom_three"] .clay-button {
+  background: var(--c3-blackgray-btn) !important;
+  border: 1px solid var(--c3-border) !important;
+  color: var(--c3-text-white) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.18s ease;
+}
+
+[data-ui-style="custom_three"] .icon-btn:hover,
+[data-ui-style="custom_three"] .mp-btn:hover,
+[data-ui-style="custom_three"] .block-btn:hover,
+[data-ui-style="custom_three"] .clay-button:hover {
+  background: var(--c3-blackgray-hover) !important;
+  color: var(--c3-accent) !important;
+  border-color: var(--c3-accent) !important;
+  box-shadow: 0 0 14px var(--c3-accent-glow) !important;
+  transform: translateY(-1px);
+}
+
+[data-ui-style="custom_three"] .icon-btn:active,
+[data-ui-style="custom_three"] .mp-btn:active,
+[data-ui-style="custom_three"] .block-btn:active,
+[data-ui-style="custom_three"] .clay-button:active {
+  transform: scale(0.96);
+  background: var(--c3-strong-black) !important;
+}
+
+/* Search Bar (Strong black inset + Black gray border + Amber focus) */
+[data-ui-style="custom_three"] .search-input {
+  background: var(--c3-strong-black-inset) !important;
+  border: 1px solid var(--c3-border) !important;
+  color: var(--c3-text-white) !important;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.85) !important;
+  transition: all 0.2s ease;
+}
+
+[data-ui-style="custom_three"] .search-input::placeholder {
+  color: var(--c3-text-dim) !important;
+}
+
+[data-ui-style="custom_three"] .search-input:focus {
+  border-color: var(--c3-accent) !important;
+  box-shadow: 0 0 16px var(--c3-accent-glow), inset 0 2px 6px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Accent High-Impact Elements (Luminous Amber / Strong Black Blends)
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_three"] .clay-accent-btn,
+[data-ui-style="custom_three"] .mp-play-btn,
+[data-ui-style="custom_three"] .add-block-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  color: #000000 !important;
+  border: 1px solid #fbbf24 !important;
+  box-shadow: 0 0 20px var(--c3-accent-glow), 0 4px 18px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 800 !important;
+  transition: all 0.2s ease;
+}
+
+[data-ui-style="custom_three"] .clay-accent-btn:hover,
+[data-ui-style="custom_three"] .mp-play-btn:hover,
+[data-ui-style="custom_three"] .add-block-btn:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+  transform: translateY(-1.5px) scale(1.03);
+  box-shadow: 0 0 28px var(--c3-accent-glow), 0 6px 24px rgba(0, 0, 0, 0.9) !important;
+}
+
+[data-ui-style="custom_three"] .clay-accent-btn:active,
+[data-ui-style="custom_three"] .mp-play-btn:active,
+[data-ui-style="custom_three"] .add-block-btn:active {
+  transform: scale(0.95);
+  background: #b45309 !important;
+}
+
+/* Checkbox */
+[data-ui-style="custom_three"] .clay-checkbox {
+  background: var(--c3-strong-black-inset) !important;
+  border: 1px solid var(--c3-border) !important;
+  color: var(--c3-text-white) !important;
+}
+
+[data-ui-style="custom_three"] .clay-checkbox.checked {
+  background: var(--c3-accent) !important;
+  color: #000000 !important;
+  border-color: var(--c3-accent) !important;
+  box-shadow: 0 0 12px var(--c3-accent-glow) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Floating Mini Player Pill & Sine Wave Bar
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_three"] .mini-player {
+  background: rgba(24, 24, 28, 0.94) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid var(--c3-border) !important;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.95), 0 0 1px rgba(255, 255, 255, 0.12) !important;
+  border-radius: 26px !important;
+}
+
+[data-ui-style="custom_three"] .mini-player:hover {
+  border-color: var(--c3-border-hover) !important;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.98), 0 0 16px rgba(245, 158, 11, 0.15) !important;
+}
+
+[data-ui-style="custom_three"] .mp-art {
+  background: var(--c3-strong-black) !important;
+  border: 1px solid var(--c3-border) !important;
+  color: var(--c3-accent) !important;
+}
+
+[data-ui-style="custom_three"] .mp-title {
+  color: var(--c3-text-white) !important;
+}
+
+[data-ui-style="custom_three"] .mp-artist {
+  color: var(--c3-text-slate) !important;
+}
+
+/* Sine Wave Progress in Custom Three */
+[data-ui-style="custom_three"] .sine-wave-track {
+  background: var(--c3-strong-black-inset) !important;
+  border: 1px solid var(--c3-border) !important;
+}
+
+[data-ui-style="custom_three"] .sine-wave-played-line {
+  stroke: url(#mini-sine-gradient) !important;
+  filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.65)) !important;
+}
+
+[data-ui-style="custom_three"] .sine-wave-unplayed-line {
+  stroke: rgba(148, 163, 184, 0.35) !important;
+}
+
+[data-ui-style="custom_three"] .sine-wave-thumb {
+  background: #ffffff !important;
+  border: 2px solid var(--c3-accent) !important;
+  box-shadow: 0 0 14px var(--c3-accent-glow) !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Containers, Modals & Generic Blocks
+   -------------------------------------------------------------------------- */
+[data-ui-style="custom_three"] .clay-box {
+  background: var(--c3-blackgray-card) !important;
+  border: 1px solid var(--c3-border) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.75) !important;
+  border-radius: 20px !important;
+  color: var(--c3-text-white) !important;
+}
+
+[data-ui-style="custom_three"] .clay-box-lg {
+  background: var(--c3-blackgray-surface) !important;
+  border: 1px solid var(--c3-border) !important;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.95) !important;
+  border-radius: 24px !important;
+  color: var(--c3-text-white) !important;
+}
+
+[data-ui-style="custom_three"] .clay-inset {
+  background: var(--c3-strong-black-inset) !important;
+  border: 1px solid var(--c3-border) !important;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Secondary Screen */
+[data-ui-style="custom_three"] .secondary-screen {
+  background: radial-gradient(circle at top left, #1f1f28 0%, var(--c3-strong-black) 85%) !important;
+}
+
+[data-ui-style="custom_three"] .secondary-header {
+  background: var(--c3-blackgray-card) !important;
+  border: 1px solid var(--c3-border) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 20px !important;
+}
+
+[data-ui-style="custom_three"] .secondary-close {
+  background: var(--c3-blackgray-btn) !important;
+  border: 1px solid var(--c3-border) !important;
+  color: var(--c3-text-white) !important;
+}
+
+[data-ui-style="custom_three"] .generic-block {
+  background: var(--c3-blackgray-card) !important;
+  border: 1px solid var(--c3-border) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.75) !important;
+  border-radius: 20px !important;
+}
+
+[data-ui-style="custom_three"] .generic-block:hover {
+  border-color: var(--c3-border-hover) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 12px rgba(245, 158, 11, 0.15) !important;
+}
+
+[data-ui-style="custom_three"] .block-name {
+  color: var(--c3-text-white) !important;
+}
+
+[data-ui-style="custom_three"] .block-badge {
+  background: var(--c3-strong-black) !important;
+  color: var(--c3-accent) !important;
+  border: 1px solid var(--c3-border) !important;
+}

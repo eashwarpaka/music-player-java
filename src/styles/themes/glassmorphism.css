@@ -1,0 +1,202 @@
+/* ==========================================================================
+   GLASSMORPHISM DESIGN SYSTEM (glassmorphism.css)
+   Translucent frosted glass, specular highlights, ambient mesh gradients
+   ========================================================================== */
+
+[data-ui-style="glassmorphism"] {
+  --style-name: "Glassmorphism";
+  --glass-bg-body: radial-gradient(at 0% 0%, #00f0ff 0px, transparent 40%),
+                   radial-gradient(at 100% 0%, #38bdf8 0px, transparent 50%),
+                   radial-gradient(at 50% 100%, #0284c7 0px, transparent 50%),
+                   #f0f9ff;
+  --glass-card: rgba(255, 255, 255, 0.55);
+  --glass-card-hover: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-border-subtle: rgba(255, 255, 255, 0.45);
+  --glass-shadow: 0 10px 32px 0 rgba(31, 38, 135, 0.12);
+  --glass-shadow-hover: 0 16px 40px 0 rgba(31, 38, 135, 0.18);
+  --glass-blur: blur(18px) saturate(180%);
+  --border-subtle: rgba(255, 255, 255, 0.45);
+}
+
+[data-ui-style="glassmorphism"][data-theme="dark"],
+[data-ui-style="glassmorphism"].dark,
+[data-ui-style="glassmorphism"] [data-theme="dark"] {
+  --glass-bg-body: radial-gradient(at 0% 0%, #4c1d95 0px, transparent 45%),
+                   radial-gradient(at 100% 0%, #1e1b4b 0px, transparent 50%),
+                   radial-gradient(at 50% 100%, #0369a1 0px, transparent 45%),
+                   #0b0d14;
+  --glass-card: rgba(24, 29, 45, 0.62);
+  --glass-card-hover: rgba(33, 40, 62, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 12px 35px 0 rgba(0, 0, 0, 0.45);
+  --glass-shadow-hover: 0 18px 45px 0 rgba(0, 0, 0, 0.6);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+}
+
+/* Atmospheric Ambient Background */
+[data-ui-style="glassmorphism"] body {
+  background: var(--glass-bg-body) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+[data-ui-style="glassmorphism"] .app-header {
+  background: transparent !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* Glass Song Rows */
+[data-ui-style="glassmorphism"] .song-row {
+  background: var(--glass-card) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow), inset 0 1px 1px 0 rgba(255, 255, 255, 0.7) !important;
+  border-radius: 16px !important;
+  padding: 8px 14px !important;
+}
+
+[data-ui-style="glassmorphism"] .song-row:hover {
+  background: var(--glass-card-hover) !important;
+  box-shadow: var(--glass-shadow-hover), inset 0 1px 2px 0 rgba(255, 255, 255, 0.9) !important;
+  transform: translateY(-1.5px);
+}
+
+[data-ui-style="glassmorphism"] .song-row:active {
+  transform: scale(0.98);
+}
+
+[data-ui-style="glassmorphism"] .song-row.active {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.85), rgba(2, 132, 199, 0.95)) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 14px 34px rgba(0, 240, 255, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-ui-style="glassmorphism"] .song-art {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Glass Inputs & Search */
+[data-ui-style="glassmorphism"] .search-input {
+  background: var(--glass-card) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Glass Icon Buttons */
+[data-ui-style="glassmorphism"] .icon-btn,
+[data-ui-style="glassmorphism"] .mp-btn,
+[data-ui-style="glassmorphism"] .block-btn,
+[data-ui-style="glassmorphism"] .clay-button {
+  background: var(--glass-card) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 4px 14px rgba(31, 38, 135, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-ui-style="glassmorphism"] .icon-btn:hover,
+[data-ui-style="glassmorphism"] .mp-btn:hover,
+[data-ui-style="glassmorphism"] .block-btn:hover,
+[data-ui-style="glassmorphism"] .clay-button:hover {
+  transform: translateY(-2px);
+  background: var(--glass-card-hover) !important;
+  box-shadow: 0 8px 20px rgba(31, 38, 135, 0.16), inset 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-ui-style="glassmorphism"] .icon-btn:active,
+[data-ui-style="glassmorphism"] .mp-btn:active,
+[data-ui-style="glassmorphism"] .block-btn:active,
+[data-ui-style="glassmorphism"] .clay-button:active {
+  transform: scale(0.94);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Glass Accent Buttons */
+[data-ui-style="glassmorphism"] .clay-accent-btn,
+[data-ui-style="glassmorphism"] .mp-play-btn,
+[data-ui-style="glassmorphism"] .add-block-btn {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-ui-style="glassmorphism"] .clay-accent-btn:hover,
+[data-ui-style="glassmorphism"] .mp-play-btn:hover,
+[data-ui-style="glassmorphism"] .add-block-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 240, 255, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Glass Panels & Modals */
+[data-ui-style="glassmorphism"] .clay-box {
+  background: var(--glass-card) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow), inset 0 1px 1px rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-ui-style="glassmorphism"] .clay-box-lg {
+  background: var(--glass-card) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1.5px solid var(--glass-border) !important;
+  box-shadow: 0 20px 50px rgba(31, 38, 135, 0.22), inset 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-ui-style="glassmorphism"] .clay-inset {
+  background: rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Glass Floating Mini Player */
+[data-ui-style="glassmorphism"] .mini-player {
+  background: var(--glass-card) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border: 1.5px solid var(--glass-border) !important;
+  box-shadow: 0 20px 48px rgba(31, 38, 135, 0.22), inset 0 1px 2px rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Glass Secondary Screen & Grid Blocks */
+[data-ui-style="glassmorphism"] .secondary-screen {
+  background: var(--glass-bg-body) !important;
+  background-attachment: fixed !important;
+}
+
+[data-ui-style="glassmorphism"] .secondary-header {
+  background: var(--glass-card) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1.5px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow), inset 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-ui-style="glassmorphism"] .secondary-close {
+  background: var(--glass-card) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 4px 12px rgba(31, 38, 135, 0.1) !important;
+}
+
+[data-ui-style="glassmorphism"] .generic-block {
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1.5px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow), inset 0 1px 1px rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-ui-style="glassmorphism"] .generic-block:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glass-shadow-hover), inset 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+}

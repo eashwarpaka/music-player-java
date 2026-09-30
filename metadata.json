@@ -1,0 +1,8 @@
+{
+  "name": "Remix POP — Claymorphism Music Player",
+  "description": "Claymorphism music player featuring dark mode, responsive media controls, song selection, and generic playlist blocks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,179 @@
+/* ==========================================================================
+   CLAYMORPHISM DESIGN SYSTEM (claymorphism.css)
+   Puffy 3D rounded shapes, tactile double-convex shadows, soft clay depth
+   ========================================================================== */
+
+[data-ui-style="claymorphism"] {
+  --style-name: "Claymorphism";
+  --clay-bg: #eef0f6;
+  --clay-shadow-dark: rgba(163, 168, 191, 0.55);
+  --clay-shadow-light: rgba(255, 255, 255, 0.9);
+  --card-bg: #eef0f6;
+  --border-subtle: rgba(163, 168, 191, 0.25);
+  --radius-card: 22px;
+  --radius-btn: 50%;
+  --radius-pill: 26px;
+}
+
+[data-ui-style="claymorphism"][data-theme="dark"],
+[data-ui-style="claymorphism"].dark,
+[data-ui-style="claymorphism"] [data-theme="dark"] {
+  --clay-bg: #1e2029;
+  --clay-shadow-dark: rgba(10, 11, 15, 0.9);
+  --clay-shadow-light: rgba(45, 49, 64, 0.75);
+  --card-bg: #1e2029;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+/* Base Body & App Container */
+[data-ui-style="claymorphism"] body {
+  background: var(--clay-bg);
+}
+
+[data-ui-style="claymorphism"] .app-header {
+  background: var(--clay-bg);
+}
+
+/* Clay Song Cards & Rows */
+[data-ui-style="claymorphism"] .song-row {
+  background: var(--clay-bg);
+  border-radius: 16px;
+  padding: 8px 14px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 4px 4px 10px var(--clay-shadow-dark), -4px -4px 10px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .song-row:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 6px 6px 14px var(--clay-shadow-dark), -6px -6px 14px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .song-row:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: inset 3px 3px 6px var(--clay-shadow-dark), inset -3px -3px 6px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .song-row.active {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 4px 4px 10px var(--clay-shadow-dark), -4px -4px 10px var(--clay-shadow-light),
+              inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+[data-ui-style="claymorphism"] .song-art {
+  border-radius: 14px;
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+/* Clay Inputs & Search */
+[data-ui-style="claymorphism"] .search-input {
+  background: var(--clay-bg);
+  box-shadow: inset 3px 3px 6px var(--clay-shadow-dark), inset -3px -3px 6px var(--clay-shadow-light);
+  border: none;
+}
+
+/* Clay Buttons */
+[data-ui-style="claymorphism"] .icon-btn,
+[data-ui-style="claymorphism"] .mp-btn,
+[data-ui-style="claymorphism"] .block-btn,
+[data-ui-style="claymorphism"] .clay-button {
+  background: var(--clay-bg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 4px 4px 8px var(--clay-shadow-dark), -4px -4px 8px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .icon-btn:hover,
+[data-ui-style="claymorphism"] .mp-btn:hover,
+[data-ui-style="claymorphism"] .block-btn:hover,
+[data-ui-style="claymorphism"] .clay-button:hover {
+  box-shadow: 2px 2px 6px var(--clay-shadow-dark), -2px -2px 6px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .icon-btn:active,
+[data-ui-style="claymorphism"] .mp-btn:active,
+[data-ui-style="claymorphism"] .block-btn:active,
+[data-ui-style="claymorphism"] .clay-button:active {
+  box-shadow: inset 3px 3px 6px var(--clay-shadow-dark), inset -3px -3px 6px var(--clay-shadow-light);
+  transform: scale(0.96);
+}
+
+/* Clay Accent Buttons */
+[data-ui-style="claymorphism"] .clay-accent-btn,
+[data-ui-style="claymorphism"] .mp-play-btn,
+[data-ui-style="claymorphism"] .add-block-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  box-shadow: 6px 6px 14px var(--clay-shadow-dark), -6px -6px 14px var(--clay-shadow-light),
+              inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+[data-ui-style="claymorphism"] .clay-accent-btn:active,
+[data-ui-style="claymorphism"] .mp-play-btn:active,
+[data-ui-style="claymorphism"] .add-block-btn:active {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+}
+
+/* Clay Checkboxes */
+[data-ui-style="claymorphism"] .clay-checkbox {
+  background: var(--clay-bg);
+  box-shadow: 2px 2px 5px var(--clay-shadow-dark), -2px -2px 5px var(--clay-shadow-light);
+}
+
+/* Clay Containers & Boxes */
+[data-ui-style="claymorphism"] .clay-box {
+  background: var(--clay-bg);
+  border-radius: 20px;
+  box-shadow: 6px 6px 14px var(--clay-shadow-dark), -6px -6px 14px var(--clay-shadow-light);
+  border: 1px solid var(--border-subtle);
+}
+
+[data-ui-style="claymorphism"] .clay-box-lg {
+  background: var(--clay-bg);
+  border-radius: 26px;
+  box-shadow: 10px 10px 22px var(--clay-shadow-dark), -10px -10px 22px var(--clay-shadow-light);
+  border: 1px solid var(--border-subtle);
+}
+
+[data-ui-style="claymorphism"] .clay-inset {
+  background: var(--clay-bg);
+  box-shadow: inset 3px 3px 6px var(--clay-shadow-dark), inset -3px -3px 6px var(--clay-shadow-light);
+}
+
+/* Clay Mini Player Pill */
+[data-ui-style="claymorphism"] .mini-player {
+  background: var(--clay-bg);
+  border-radius: 26px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 14px 34px var(--clay-shadow-dark), 0 -4px 18px var(--clay-shadow-light);
+}
+
+/* Clay Secondary Screen & Blocks */
+[data-ui-style="claymorphism"] .secondary-screen {
+  background: var(--clay-bg);
+}
+
+[data-ui-style="claymorphism"] .secondary-header {
+  background: var(--clay-bg);
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 8px 8px 18px var(--clay-shadow-dark), -8px -8px 18px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .secondary-close {
+  background: var(--clay-bg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 4px 4px 10px var(--clay-shadow-dark), -4px -4px 10px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .generic-block {
+  background: var(--clay-bg);
+  border-radius: 20px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 6px 6px 16px var(--clay-shadow-dark), -6px -6px 16px var(--clay-shadow-light);
+}
+
+[data-ui-style="claymorphism"] .generic-block:hover {
+  box-shadow: 8px 8px 20px var(--clay-shadow-dark), -8px -8px 20px var(--clay-shadow-light);
+}
